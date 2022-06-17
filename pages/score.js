@@ -48,7 +48,7 @@ export default function ScorePage() {
 
   if(isSuccess) {
     let dance = document.createElement('img');
-    dance.setAttribute('src', '../assets/dance.gif');
+    dance.setAttribute('src', '/dance.gif');
     dance.classList.add('w-50', 'mb-5');
     div.appendChild(dance);
   }
