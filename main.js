@@ -3,7 +3,6 @@ import LearnPage from "./pages/learn.js";
 import RememberPage from "./pages/remember.js";
 import ScorePage from "./pages/score.js";
 import StartPage from "./pages/start.js";
-import WordService from "./services/word-service.js";
 
 // fully static because only one
 // need access to navigatoTo() from anywhere
