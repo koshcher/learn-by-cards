@@ -22,22 +22,22 @@ export default function StartPage() {
   `;
 
   let flex = document.createElement('div');
-  flex.classList.add('d-flex','justify-content-center');
-  
+  flex.classList.add('d-flex', 'justify-content-center');
+
   let input = document.createElement('input');
   input.setAttribute('type', 'number');
-  input.classList.add('form-control','w-25');
+  input.classList.add('form-control', 'w-25');
   input.setAttribute('min', '1');
   input.setAttribute('value', '10');
 
   let btn = document.createElement('button');
-  btn.classList.add('btn','btn-dark','ms-3');
+  btn.classList.add('btn', 'btn-dark', 'ms-3');
   btn.innerText = 'Поїхали';
 
   btn.addEventListener('click', async (_) => {
     WordService.getWords(Number(input.value))
-    .then(_ => {App.navigateTo('learn', { id:0 }); console.log(WordService.words)})
-    .catch(e => {App.navigateTo('error'); console.log(e)});
+      .then(_ => { App.navigateTo('learn', { id: 0 }); console.log(WordService.words) })
+      .catch(e => { App.navigateTo('error'); console.log(e) });
   });
 
   flex.appendChild(input);
